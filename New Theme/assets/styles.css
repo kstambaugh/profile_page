@@ -1,0 +1,84 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-size: 100%;
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* nav bar - down leftside of page */
+header {
+
+    height: 100%;
+    width: fit-content;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: #0096C7;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+nav li {
+    padding: 20px;
+    padding-top: 50px;
+    color: white
+}
+
+nav a {
+    border: solid transparent;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 180, 216, .3);
+}
+
+/* this code keeps the rest of the page from meshing with the sidenav bar */
+main {
+    margin-left: 129px;
+    padding-left: 10px;
+    display: block;
+}
+
+#hello {
+    text-align: center;
+    font-size: xx-large;
+    padding: 10px;
+
+}
+
+#myface {
+    text-align: center;
+    margin: 20px;
+    /* background-color: #0096C7; */
+    border-radius: 50px;
+}
+
+#profile-pic {
+    border-radius: 50px;
+    margin: 50px;
+
+}
+
+#self-title {
+    text-align: center;
+}
+
+#self-title li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}

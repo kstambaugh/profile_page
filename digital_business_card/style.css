@@ -6,23 +6,14 @@
     --tiffany-blue: #01BCBBff;
 }
 
-body,
-header,
-aside,
-main,
-title,
-footer,
-footer div {
-    /* border: 1px solid black; */
-    background-color: #fafafa;
+#html:hover>ul {
+    background: #333;
 }
-
 
 body {
     margin: 0;
     margin-top: -20px;
     font-family: 'Barlow Semi Condensed', sans-serif;
-
 }
 
 li,
@@ -49,12 +40,13 @@ h1 {
 
 #welcome-text {
     max-width: 50%;
-    margin-left: 30px;
+    margin-left: 100px;
 }
 
 .menu__item {
     display: block;
     padding: 12px 24px;
+    margin-right: 10px;
     color: #333;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -67,11 +59,11 @@ h1 {
     float: right;
     top: 0;
     width: 200px;
-    height: 80vh;
+    height: 50vh;
     margin: 0;
     padding: 33px 0;
     list-style: none;
-    background-image: linear-gradient(200deg, var(--tiffany-blue), var(--medium-turquoise), #fafafa, #fafafa);
+    /* background-image: linear-gradient(180deg, #fafafa, var(--tiffany-blue), var(--medium-turquoise), #fafafa); */
 
 }
 
@@ -213,17 +205,25 @@ footer {
     .hamburger-menu {
         display: none;
     }
-
-    aside .menu__box {
-        border-top-left-radius: 30% 10%;
-    }
-
 }
 
 /* this is browser css */
 @media (min-width: 413px) {
+
+    aside .menu__box {
+        padding-top: 80px;
+    }
+
+    .menu__item:hover {
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+        /* box-shadow: 0px 0px 5px #333; */
+        background-image: linear-gradient(#fafafa, var(--tiffany-blue), #fafafa);
+    }
+
     main {
-        z-index: -1;
         display: flex;
         justify-content: center;
         margin-top: 100px;
@@ -231,6 +231,7 @@ footer {
 
     #hero-image {
         border-radius: 50%;
+        box-shadow: 0px 0px 25px #333;
 
     }
 
@@ -244,6 +245,7 @@ footer {
         border: .5px solid #333;
         margin: 20px;
         box-shadow: 0px 0px 5px #333;
+        /* background-image: linear-gradient(220deg, #fafafa, #fafafa, var(--tiffany-blue), var(--tiffany-blue), #fafafa, #fafafa); */
     }
 
     footer ul {
@@ -257,6 +259,7 @@ footer {
     footer li {
         display: inline;
     }
+
 
     .social-media {
         text-align: center;

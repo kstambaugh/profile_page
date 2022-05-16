@@ -1,0 +1,273 @@
+:root {
+    --congo-pink: #FA8E83ff;
+    --misty-rose: #FEE3DCff;
+    --baby-pink: #F3C9BDff;
+    --medium-turquoise: #4BD1CBff;
+    --tiffany-blue: #01BCBBff;
+}
+
+body,
+header,
+aside,
+main,
+title,
+footer,
+footer div {
+    /* border: 1px solid black; */
+    background-color: #fafafa;
+}
+
+
+body {
+    margin: 0;
+    margin-top: -20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin-top: 100px;
+}
+
+#hero-image {
+    background-color: #fafafa;
+    text-align: left;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(assests/skybackground.png);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#welcome-text {
+    max-width: 50%;
+    margin-left: 30px;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.menu__box {
+    float: right;
+    top: 0;
+    width: 200px;
+    height: 80vh;
+    margin: 0;
+    padding: 33px 0;
+    list-style: none;
+    background-image: linear-gradient(200deg, var(--tiffany-blue), var(--medium-turquoise), #fafafa, #fafafa);
+
+}
+
+footer {
+    margin-top: 50px;
+}
+
+/* just turns the sidebar into a hamburger menu for mobile */
+
+@media (max-width:412px) {
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked+.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu__toggle:checked+.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.menu__box {
+        right: 0% !important;
+        left: unset
+    }
+
+    .menu__btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 200px;
+        height: 100%;
+        margin: 0;
+        padding: 33px 0;
+        list-style: none;
+        background-image: linear-gradient(230deg, #fafafa, #fafafa, #fafafa, var(--medium-turquoise), var(--tiffany-blue));
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+        z-index: 2;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+
+    #filter-layer {
+        z-index: 1;
+        opacity: 100%;
+    }
+
+}
+
+/* This is the styling for the mobile main page */
+@media (max-width:412px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div {
+        border: .5px solid #333;
+        margin: 20px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 30px;
+    }
+
+    li {
+        display: inline;
+    }
+
+    .social-media {
+        text-align: center;
+
+    }
+
+    h4 {
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+}
+
+/* This is to put the nav bar back if viewing from a browser window */
+@media (min-width: 413px) {
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    aside .menu__box {
+        border-top-left-radius: 30% 10%;
+    }
+
+}
+
+/* this is browser css */
+@media (min-width: 413px) {
+    main {
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    #hero-image {
+        border-radius: 50%;
+
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer div {
+        border: .5px solid #333;
+        margin: 20px;
+        box-shadow: 0px 0px 5px #333;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 30px;
+        width: 300px
+    }
+
+    footer li {
+        display: inline;
+    }
+
+    .social-media {
+        text-align: center;
+
+    }
+
+    h4 {
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+
+}

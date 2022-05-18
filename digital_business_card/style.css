@@ -11,10 +11,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: bold;
     list-style: none;
     text-decoration: none;
     color: inherit;
 }
+
+/* this applies to both browser and mobile styling ----------------------------------------------------------------------------------------------------- */
+.menu__item:hover {}
 
 /* just turns the sidebar into a hamburger menu for mobile ---------------------------------------------------------------------------------------------*/
 
@@ -84,7 +88,7 @@
         margin: 0;
         padding: 33px 0;
         list-style: none;
-        background-image: linear-gradient(230deg, #fafafa, #fafafa, #fafafa, var(--medium-turquoise), var(--tiffany-blue));
+        background-image: linear-gradient(230deg, #fafafa, #fafafa, var(--medium-turquoise), var(--medium-turquoise));
         box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
         transition-duration: .25s;
         z-index: 2;
@@ -102,19 +106,37 @@
     }
 }
 
-/* this is for the brower side nav bar ---------------------------------------------------------------------------------------------------------------- */
-aside li {
-    display: inline;
+/* this is for the browser side nav bar ---------------------------------------------------------------------------------------------------------------- */
+aside ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.menu__item:hover {
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-    background-image: linear-gradient(#fafafa, var(--tiffany-blue), #fafafa);
-    box-shadow: 0px 0px 20px 5px var(--congo-pink);
+aside a,
+li {
+    padding: 13px;
+    background-size: cover;
 }
+
+aside {
+    margin-top: 15px;
+}
+
+aside .menu__item {
+    background: linear-gradient(transparent, transparent 50%, var(--medium-turquoise) 50%, var(--medium-turquoise));
+    background-size: 100% 202%;
+    transition: all 0.2s ease;
+}
+
+aside .menu__item:hover {
+    background-position: 100% 100%;
+    box-shadow: 0px 0px 10px #333;
+    color: white;
+}
+
+
+
 
 /* saving these for some javascript fun ---------------------------------------------------------------------------------------------------------------- */
 
@@ -128,24 +150,29 @@ aside li {
 
 #excelvba:hover {} */
 
+
+/* css for the hero picture ------------------------------------------------------------------------------------------------------------ */
+
+
 .hero-wrap {
-    overflow: hidden;
-    position: relative;
+    text-align: center;
+    display: block;
+    height: 40vh;
 }
 
 .hero-image {
     opacity: .4;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
+    height: 100vh;
     width: 100%;
-    height: auto;
 }
 
 .welcome-text {
     position: relative;
+    margin-top: 100px;
 }
-
 
 main {
     display: flex;
@@ -154,17 +181,19 @@ main {
     margin-top: 100px;
 }
 
-
 /* this is for inital styling for the languages and social boxes------------------------------------------------------------------------------------------------------------------------------ */
+
 h4 {
     text-align: center;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .box-cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 
 }
 
@@ -176,7 +205,7 @@ h4 {
 .box-cards ul {
     display: flex;
     justify-content: space-evenly;
-    margin: 30px;
+    margin: 10px;
     min-width: 300px;
 }
 
@@ -188,14 +217,14 @@ h4 {
 
 /* This css is for the programming languages and social media boxes to change colors when hovering------------------------------------------------------------------------------------------ */
 .box {
-    background: linear-gradient(white, white 50%, var(--medium-turquoise) 50%, var(--tiffany-blue));
+    background: linear-gradient(transparent, transparent 50%, var(--medium-turquoise) 50%, var(--medium-turquoise));
     background-size: 100% 202%;
     transition: all 0.2s ease;
 }
 
 .box:hover {
     background-position: 100% 100%;
-    box-shadow: 0px 0px 20px 5px var(--congo-pink);
+    box-shadow: 0px 0px 10px #333;
 }
 
 .box:hover h4 {
@@ -213,7 +242,33 @@ h4 {
         display: none;
     }
 
-    aside .menu__box {
-        padding-top: 80px;
+    .hero-wrap {
+        text-align: center;
+        display: block;
+        height: 40vh;
+    }
+
+    .hero-image {
+        opacity: .3;
+        position: fixed;
+        left: 25%;
+        top: 10%;
+        height: 50vh;
+        width: 50%;
+        border-radius: 50%;
+    }
+
+    .hero-image {
+        box-shadow: inset 0px 0px 0px 0px blue;
+    }
+
+    .welcome-text {
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .box-cards {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }

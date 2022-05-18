@@ -10,6 +10,9 @@ ul {
     display: none;
 }
 
+nav {
+    display: none;
+}
 
 .lobster {
     font-family: 'Lobster Two', italic
@@ -27,7 +30,15 @@ ul {
     font-family: 'Pacifico', cursive;
 }
 
-
+body {
+    position: absolute;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-image: url(assets/blog_pics/background.png); */
+    background-attachment: fixed;
+}
 
 .hamburger-menu {
     position: absolute;
@@ -44,26 +55,11 @@ header {
     height: 70px;
 }
 
-#hanging-vines {
-    background-image: url(assets/blog_pics/hanging-vines.png);
-    min-height: 2em;
-}
-
 main {
     text-align: center;
     display: flex;
     flex-direction: column;
     border: 1px solid #333;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-    /* background-image: linear-gradient(to bottom, skyblue, white); */
-    background-image: url(assets/blog_pics/background.png);
-    background-attachment: fixed;
 }
 
 .myCards {
@@ -79,26 +75,20 @@ main h3 {
     color: white;
 }
 
-.card-img {
+/* .card-img {
     max-height: 150px;
     width: 45%;
     float: left;
     border-right: 1px solid #333;
     box-shadow: 5px 0px 5px -1px white;
-}
+} */
 
-.myCards p {
+/* .myCards p {
     max-width: 50%;
     margin-top: 5px;
     float: right;
-}
+} */
 
-
-#woodtop {
-    background-image: url(assets/blog_pics/wall-topper.png);
-    min-height: 2em;
-    z-index: 2;
-}
 
 footer {
     background-image: url(assets/blog_pics/brick-wall.png);
@@ -112,6 +102,11 @@ footer {
 @media (max-width:412) {
     #browser_menu ul {
         display: unset;
+    }
+
+    .left-side,
+    .right-side {
+        display: none;
     }
 
     body {

@@ -6,113 +6,16 @@
     --tiffany-blue: #01BCBBff;
 }
 
-/* saving these for some javascript fun */
-/* #html:hover{}
-
-#css:hover {}
-
-#javascript:hover {}
-
-#python:hover {}
-
-#excelvba:hover {} */
-
-body {
+* {
     margin: 0;
-    margin-top: -20px;
+    padding: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
-}
-
-li,
-a {
     list-style: none;
     text-decoration: none;
     color: inherit;
 }
 
-h1 {
-    margin-top: 100px;
-}
-
-#hero-image {
-    background-color: #fafafa;
-    text-align: left;
-    min-height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    background-image: url(assets/index_pics/skybackground.png);
-    background-repeat: no-repeat;
-    margin: 0;
-}
-
-#welcome-text {
-    max-width: 50%;
-    margin-left: 100px;
-}
-
-.menu__item {
-    display: block;
-    padding: 12px 24px;
-    margin-right: 10px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-
-}
-
-.menu__box {
-    float: right;
-    top: 0;
-    width: 200px;
-    height: 50vh;
-    margin: 0;
-    padding: 33px 0;
-    list-style: none;
-    /* background-image: linear-gradient(180deg, #fafafa, var(--tiffany-blue), var(--medium-turquoise), #fafafa); */
-
-}
-
-footer {
-    margin-top: 50px;
-}
-
-.box {
-    color: black;
-    background: linear-gradient(white, white 50%, var(--medium-turquoise) 50%, var(--tiffany-blue));
-    background-size: 100% 202%;
-    transition: all 0.2s ease;
-}
-
-.box h2 {
-    font-weight: 400;
-    letter-spacing: -1.5px;
-    line-height: 1.2;
-}
-
-.box h3 {
-    font: 0.8em "Lucida Grande", serif;
-}
-
-.box:hover {
-    background-position: 100% 100%;
-    box-shadow: 0px 0px 20px 5px var(--congo-pink);
-}
-
-.box:hover h2 {
-    color: #48ad26;
-}
-
-.box:hover h4 {
-    color: white;
-}
-
-.box:hover i {
-    color: white;
-}
-
-/* just turns the sidebar into a hamburger menu for mobile */
+/* just turns the sidebar into a hamburger menu for mobile ---------------------------------------------------------------------------------------------*/
 
 @media (max-width:412px) {
 
@@ -196,157 +99,120 @@ footer {
         text-decoration: none;
         transition-duration: .25s;
     }
+}
 
-    #filter-layer {
-        z-index: 1;
-        opacity: 100%;
-    }
+/* this is for the brower side nav bar ---------------------------------------------------------------------------------------------------------------- */
+aside li {
+    display: inline;
+}
+
+.menu__item:hover {
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-image: linear-gradient(#fafafa, var(--tiffany-blue), #fafafa);
+    box-shadow: 0px 0px 20px 5px var(--congo-pink);
+}
+
+/* saving these for some javascript fun ---------------------------------------------------------------------------------------------------------------- */
+
+/* #html:hover{}
+
+#css:hover {}
+
+#javascript:hover {}
+
+#python:hover {}
+
+#excelvba:hover {} */
+
+.hero-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    opacity: .4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.welcome-text {
+    position: relative;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+/* this is for inital styling for the languages and social boxes------------------------------------------------------------------------------------------------------------------------------ */
+h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
-/* This is the styling for the mobile main page */
-@media (max-width:412px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer div {
-        border: .5px solid #333;
-        margin: 20px;
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 30px;
-    }
-
-    li {
-        display: inline;
-    }
-
-    .social-media {
-        text-align: center;
-
-    }
-
-    h4 {
-        text-align: center;
-        font-weight: bold;
-
-    }
-
-    .box {
-        color: black;
-        background: linear-gradient(white, white 50%, var(--medium-turquoise) 50%, var(--tiffany-blue));
-        background-size: 100% 202%;
-        transition: all 0.2s ease;
-    }
-
-    .box h2 {
-        font-weight: 400;
-        letter-spacing: -1.5px;
-        line-height: 1.2;
-    }
-
-    .box h3 {
-        font: 0.8em "Lucida Grande", serif;
-    }
-
-    .box:hover {
-        background-position: 100% 100%;
-        box-shadow: 0px 0px 20px 5px var(--congo-pink);
-    }
-
-    .box:hover h2 {
-        color: #48ad26;
-    }
-
-    .box:hover h4 {
-        color: white;
-    }
-
-    .box:hover i {
-        color: white;
-    }
-
+.box-cards div {
+    border: .5px solid #333;
+    margin: 20px;
 }
 
-/* This is to put the nav bar back if viewing from a browser window */
+.box-cards ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+    min-width: 300px;
+}
+
+.box-cards div {
+    border: .5px solid #333;
+    margin: 20px;
+    box-shadow: 0px 0px 5px #333;
+}
+
+/* This css is for the programming languages and social media boxes to change colors when hovering------------------------------------------------------------------------------------------ */
+.box {
+    background: linear-gradient(white, white 50%, var(--medium-turquoise) 50%, var(--tiffany-blue));
+    background-size: 100% 202%;
+    transition: all 0.2s ease;
+}
+
+.box:hover {
+    background-position: 100% 100%;
+    box-shadow: 0px 0px 20px 5px var(--congo-pink);
+}
+
+.box:hover h4 {
+    color: white;
+}
+
+.box:hover i {
+    color: white;
+}
+
+/* this is browser specific styling ------------------------------------------------------------------------------------------------------- */
 @media (min-width: 413px) {
 
     .hamburger-menu {
         display: none;
     }
-}
-
-/* this is browser css */
-@media (min-width: 413px) {
 
     aside .menu__box {
         padding-top: 80px;
     }
-
-    .menu__item:hover {
-        border-top-left-radius: 10%;
-        border-bottom-left-radius: 10%;
-        border-top-right-radius: 10%;
-        border-bottom-right-radius: 10%;
-        /* box-shadow: 0px 0px 5px #333; */
-        background-image: linear-gradient(#fafafa, var(--tiffany-blue), #fafafa);
-        box-shadow: 0px 0px 20px 5px var(--congo-pink);
-    }
-
-    main {
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-    }
-
-    #hero-image {
-        border-radius: 50%;
-        box-shadow: 0px 0px 25px #333;
-
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    footer div {
-        border: .5px solid #333;
-        margin: 20px;
-        box-shadow: 0px 0px 5px #333;
-        /* background-image: linear-gradient(220deg, #fafafa, #fafafa, var(--tiffany-blue), var(--tiffany-blue), #fafafa, #fafafa); */
-    }
-
-    footer ul {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 30px;
-        width: 300px
-    }
-
-    footer li {
-        display: inline;
-    }
-
-
-    .social-media {
-        text-align: center;
-
-    }
-
-    h4 {
-        text-align: center;
-        font-weight: bold;
-
-    }
-
-
 }

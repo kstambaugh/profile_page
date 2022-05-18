@@ -31,15 +31,14 @@ nav {
 }
 
 body {
-    position: absolute;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    /* background-image: url(assets/blog_pics/background.png); */
     background-attachment: fixed;
 }
 
+/* ! delete maybe? */
 .hamburger-menu {
     position: absolute;
 }
@@ -52,25 +51,9 @@ header {
     text-align: center;
     background-image: url(assets/blog_pics/brick-wall.png);
     border-bottom: 2px solid black;
-    height: 70px;
 }
 
-main {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #333;
-}
-
-.myCards {
-    border: 1px solid #333;
-    margin: 10px 20px;
-    text-align: left;
-    background-color: white;
-    box-shadow: inset 0px 0px 10px 1px white;
-}
-
-main h3 {
+.myCards h3 {
     background-color: #333;
     color: white;
 }
@@ -116,6 +99,14 @@ footer {
         justify-content: space-between;
         background-image: url(assets/blog_pics/background.png);
         background-attachment: fixed;
+    }
+
+    .myCards {
+        border: 1px solid #333;
+        margin: 10px 20px;
+        text-align: left;
+        background-color: white;
+        box-shadow: inset 0px 0px 10px 1px white;
     }
 }
 
@@ -224,9 +215,7 @@ footer {
     }
 
     h1 {
-
         padding: 10px;
-
     }
 
     header ul {
@@ -255,20 +244,6 @@ footer {
         height: 130px;
     }
 
-    .border-img {
-        background-image: url(assets/blog_pics/background.png);
-        height: 100vh;
-        width: 20px;
-    }
-
-    .left-side {
-        float: left;
-    }
-
-    .right-side {
-        float: right;
-    }
-
     body {
         display: flex;
         min-height: 100vh;
@@ -280,38 +255,64 @@ footer {
 
     main {
         text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        border: 1px solid #333;
+    }
+
+    .border-img {
+        background-image: url(assets/blog_pics/background.png);
+        height: 200vh;
+        min-width: 10vw;
+    }
+
+    .left-side {
+        float: left;
+        background-attachment: fixed;
+        border-right: 5px groove #333;
+    }
+
+    .right-side {
+        float: right;
+        background-attachment: fixed;
+        border-left: 5px groove #333;
+    }
+
+    .blog-articles {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        border: 1px solid #333;
     }
 
     .myCards {
         border: 1px solid #333;
-        max-width: 50%;
-        margin: 10px 20px;
+        height: fit-content;
         text-align: left;
         background-color: white;
         box-shadow: inset 0px 0px 10px 1px white;
     }
 
-    main h3 {
-        background-color: #333;
-        color: white;
+    .blog-info {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 60vh;
+        margin: 50px;
     }
 
-    .card-img {
-        max-height: 150px;
-        width: 45%;
+    #myface {
+        max-width: 20vw;
         float: left;
-        border-right: 1px solid #333;
-        box-shadow: 5px 0px 5px -1px white;
     }
 
-    .myCards p {
-        max-width: 50%;
-        margin-top: 5px;
-        float: right;
+    .intro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
     }
 
 }

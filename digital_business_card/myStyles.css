@@ -39,18 +39,19 @@ nav li {
 .character-image {
     text-align: center;
     padding: 35px;
-    background-image: url(assets/about_me_pics/background-image.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    border: 1px solid #333;
+    background-color: #e2cb97;
+    box-shadow: inset 0px 0px 50px 20px #765842, 0px 0px 20px 2px #333;
     margin: 15px 20px;
-    box-shadow: 0px 0px 10px 3px #333;
+
 }
 
 #character-doll {
+    z-index: -3;
     height: 350px;
     border-radius: 25px;
-    border: 1px solid #765842;
-    box-shadow: inset 0px 0px 100px 10px #e2cb97;
+    border: 1px solid transparent;
+    box-shadow: inset 0px 0px 20px 10px transparent, 0px 0px 20px 1px #765842;
 }
 
 .backstory,

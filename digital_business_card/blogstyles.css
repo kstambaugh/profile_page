@@ -232,7 +232,8 @@ footer {
         border: 3px #333;
         color: #333;
         border-style: solid dotted solid solid;
-        background-color: #dab171;
+        /* background-color: #dab171; */
+        background-color: whitesmoke;
         box-shadow: inset 0px 0px 0px 2px #333;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
@@ -329,14 +330,14 @@ footer {
     /*  this is the container to make look like a sheet of paper */
 
     .blog-info {
-        background-color: rgb(248, 234, 105);
+        background-color: rgb(241, 238, 204);
         background-image: repeating-linear-gradient(transparent 0, transparent 1em, skyblue 0, skyblue 1.1em);
     }
 
     .blog-info::after {
         content: "";
         position: relative;
-        left: -49rem;
+        left: -52rem;
         top: 0;
         height: 100%;
         width: .1rem;
@@ -372,10 +373,25 @@ footer {
     }
 
     .intro-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 50%;
+
+        inline-size: 680px;
+        overflow-wrap: break-word;
+    }
+
+    h2 {
+        margin-top: 2px;
+    }
+
+    h3 {
+        margin-top: 7px;
+        line-height: .9em;
+    }
+
+    p {
+        text-align: left;
+        line-height: 1.1em;
+        margin-top: 56px;
+        font-weight: 600;
     }
 
 }

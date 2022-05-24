@@ -12,8 +12,10 @@
 /* Plan to have these words float around the background (like the bouncing screensavers) */
 
 .word-float {
-    display: none;
+    /* display: none; */
     position: absolute;
+    top: unset;
+    left: unset;
 }
 
 html,

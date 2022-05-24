@@ -9,6 +9,13 @@
     font-weight: unset;
 }
 
+/* Plan to have these words float around the background (like the bouncing screensavers) */
+
+.word-float {
+    display: none;
+    position: absolute;
+}
+
 html,
 body {
     display: flex;
@@ -36,18 +43,15 @@ nav li {
 
 
 main {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 100%;
     margin: auto;
-
 }
 
 .welcome {
-    border: 1px solid black;
     background-image: url(self-placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -56,22 +60,61 @@ main {
     padding: 200px;
 }
 
-footer {
+#mylanguages {
     border: 1px solid black;
+}
+
+#mylanguages ul {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#mylanguages li {
+    padding: 30px;
+    background: green;
+    width: 155px;
+}
+
+
+
+footer {
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     height: 150px;
 }
 
-#mysocialmedia {
-    border: 1px solid black;
-    text-align: right;
+#mylogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(placeholder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
 }
 
-footer ul {}
+#mylogo p {
+    text-align: center;
+}
 
-footer p {}
+#mysocialmedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+    margin-right: 50px;
+}
 
-footer img {}
+#mysocialmedia figcaption {
+    padding: 25px;
+}
+
+footer li {
+    display: inline;
+    padding: 10px;
+}

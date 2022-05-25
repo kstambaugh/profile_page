@@ -14,9 +14,15 @@
 .word-float {
     /* display: none; */
     position: absolute;
-    top: unset;
-    left: unset;
+    top: var(--screen-y);
+    left: var(--screen-x);
 }
+
+:root {
+    --screen-x: 0px;
+    --screen-y: 0px;
+}
+
 
 html,
 body {

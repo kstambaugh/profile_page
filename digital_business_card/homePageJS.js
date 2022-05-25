@@ -17,8 +17,15 @@ for (i = 0; i < floatWords.length; i++) {
 }
 
 for (i = 0; i < floatArray.length; i++) {
-
+    let myFloat = floatArray[i];
+    // myFloat.classList.replace()
+    myFloat.wordFloat = 'myfloat'
+    console.log(myFloat)
 }
 
+let root = document.documentElement;
 
-console.log(xPosition, yPosition)
+root.addEventListener('load'){
+    root.style.setProperty('--screen-x',)
+}
+

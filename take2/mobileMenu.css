@@ -1,0 +1,11 @@
+@media (max-width:1024px) {
+    header nav ul {
+        display: none;
+    }
+}
+
+#mobile-menu-content {
+    border: 1px solid black;
+}
+
+#mobile-menu-content {}

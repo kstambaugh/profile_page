@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 100%;
+}
+
+nav {
+    border: 1px solid black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
